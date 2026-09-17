@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+.sidebar {
+    position: fixed;
+    width: 240px;
+    height: 100vh;
+    background: #18212f;
+    color: white;
+    padding: 25px;
+}
+
+.sidebar h2 {
+    margin-bottom: 5px;
+}
+
+.sidebar p {
+    color: #aaa;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 13px;
+    margin: 6px 0;
+    border: none;
+    border-radius: 8px;
+    background: #263548;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background: #34495e;
+}
+
+.main {
+    margin-left: 240px;
+    padding: 25px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+header input {
+    padding: 12px;
+    width: 280px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.card,
+.box,
+.member,
+.transaction {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.card strong {
+    font-size: 30px;
+}
+
+.box {
+    max-width: 600px;
+}
+
+input {
+    padding: 12px;
+    margin: 6px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+}
+
+button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background: #222;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.member {
+    display: inline-block;
+    width: 30%;
+    margin-right: 2%;
+    vertical-align: top;
+}
+
+.transaction {
+    max-width: 700px;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .member {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        display: block;
+    }
+
+    header input {
+        width: 100%;
+    }
+}
